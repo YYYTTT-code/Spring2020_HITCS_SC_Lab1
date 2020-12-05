@@ -6,6 +6,8 @@
       <sourceFolder url="file://$MODULE_DIR$/P2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/P3" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/answer" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -19,5 +21,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="javax.json-1.0" level="project" />
   </component>
 </module>
