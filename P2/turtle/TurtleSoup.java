@@ -152,7 +152,24 @@ public class TurtleSoup {
      * @param turtle the turtle context
      */
     public static void drawPersonalArt(Turtle turtle) {
-        throw new RuntimeException("implement me!");
+//        throw new RuntimeException("implement me!");
+        for (int i = 0; i < 600; i++) {
+            turtle.forward(i);
+            if (i < 100)
+                turtle.color(PenColor.YELLOW);
+            else if (i < 200)
+                turtle.color(PenColor.MAGENTA);
+            else if (i < 300)
+                turtle.color(PenColor.GREEN);
+            else if (i < 400)
+                turtle.color(PenColor.RED);
+            else if (i < 500)
+                turtle.color(PenColor.ORANGE);
+            else {
+                turtle.color(PenColor.BLUE);
+            }
+            turtle.turn(91);
+        }
     }
 
     /**
@@ -166,7 +183,8 @@ public class TurtleSoup {
         DrawableTurtle turtle = new DrawableTurtle();
 
 //        drawSquare(turtle, 40);
-        drawRegularPolygon(turtle,6,100);
+//        drawRegularPolygon(turtle,6,100);
+        drawPersonalArt(turtle);
         // draw the window
         turtle.draw();
     }
