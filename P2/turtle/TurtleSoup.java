@@ -95,7 +95,14 @@ public class TurtleSoup {
      */
     public static double calculateBearingToPoint(double currentBearing, int currentX, int currentY,
                                                  int targetX, int targetY) {
-        throw new RuntimeException("implement me!");
+//        throw new RuntimeException("implement me!");
+        double theta=Math.atan2(targetY-currentY,targetX-currentX);
+//        System.out.println(theta);
+        theta=180.0*theta/Math.PI;
+        double ret=-currentBearing+90.0-theta;
+//        System.out.println(ret);
+        return ret<0?(360+ret):ret;
+
     }
 
     /**
@@ -113,7 +120,15 @@ public class TurtleSoup {
      *         otherwise of size (# of points) - 1
      */
     public static List<Double> calculateBearings(List<Integer> xCoords, List<Integer> yCoords) {
-        throw new RuntimeException("implement me!");
+//        throw new RuntimeException("implement me!");
+        List<Double> ret=new ArrayList<>();
+        double tem=0.0;
+        for(int i=1;i<xCoords.size();i++){
+            tem=calculateBearingToPoint(tem,xCoords.get(i-1),yCoords.get(i-1),xCoords.get(i),yCoords.get(i));
+            ret.add(tem);
+        }
+        return ret;
+
     }
     
     /**
