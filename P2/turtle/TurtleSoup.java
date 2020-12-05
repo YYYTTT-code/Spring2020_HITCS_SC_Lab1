@@ -5,6 +5,7 @@ package turtle;
 
 import java.util.List;
 import java.util.Set;
+import java.lang.Math;
 import java.util.ArrayList;
 
 public class TurtleSoup {
@@ -34,7 +35,8 @@ public class TurtleSoup {
      * @return angle in degrees, where 0 <= angle < 360
      */
     public static double calculateRegularPolygonAngle(int sides) {
-        throw new RuntimeException("implement me!");
+//        throw new RuntimeException("implement me!");
+        return (double) (sides-2)*180.0/sides;
     }
 
     /**
@@ -48,7 +50,8 @@ public class TurtleSoup {
      * @return the integer number of sides
      */
     public static int calculatePolygonSidesFromAngle(double angle) {
-        throw new RuntimeException("implement me!");
+//        throw new RuntimeException("implement me!");
+        return (int)Math.round(360.0/(180.0-angle));
     }
 
     /**
@@ -61,7 +64,14 @@ public class TurtleSoup {
      * @param sideLength length of each side
      */
     public static void drawRegularPolygon(Turtle turtle, int sides, int sideLength) {
-        throw new RuntimeException("implement me!");
+//        throw new RuntimeException("implement me!");
+        double angles=calculateRegularPolygonAngle(sides);
+        double drawAngles=180.0-angles;
+        for(int i=0;i<sides;i++){
+            turtle.forward(sideLength);
+            turtle.turn(drawAngles);
+        }
+
     }
 
     /**
@@ -140,8 +150,8 @@ public class TurtleSoup {
     public static void main(String args[]) {
         DrawableTurtle turtle = new DrawableTurtle();
 
-        drawSquare(turtle, 40);
-
+//        drawSquare(turtle, 40);
+        drawRegularPolygon(turtle,6,100);
         // draw the window
         turtle.draw();
     }
