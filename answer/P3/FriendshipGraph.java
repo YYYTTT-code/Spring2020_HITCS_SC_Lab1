@@ -13,7 +13,7 @@ public class FriendshipGraph {
 	 * -1.
 	 * 
 	 * @param Person
-	 *            person, an instance of class Person of "social network".
+	 *            person, an instance of class mycode.Person of "social network".
 	 * @return void.
 	 */
 	public void addVertex(Person person) {
