@@ -1,8 +1,9 @@
 /* Copyright (c) 2007-2016 MIT 6.005 course staff, all rights reserved.
  * Redistribution of original or derived work requires permission of course staff.
  */
-package twitter;
+package test.twitter;
 
+import P4.twitter.*;
 import static org.junit.Assert.*;
 
 import java.time.Instant;
@@ -32,7 +33,7 @@ public class ExtractTest {
     
     @Test
     public void testGetTimespanTwoTweets() {
-        Timespan timespan = Extract.getTimespan(Arrays.asList(tweet1, tweet2));
+        P4.twitter.Timespan timespan = Extract.getTimespan(Arrays.asList(tweet1, tweet2));
         
         assertEquals("expected start", d1, timespan.getStart());
         assertEquals("expected end", d2, timespan.getEnd());

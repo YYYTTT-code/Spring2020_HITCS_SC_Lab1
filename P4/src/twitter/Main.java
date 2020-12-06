@@ -3,6 +3,8 @@
  */
 package src.twitter;
 
+import P4.twitter.Timespan;
+
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;

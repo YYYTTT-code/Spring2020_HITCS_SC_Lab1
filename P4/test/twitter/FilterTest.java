@@ -1,13 +1,14 @@
 /* Copyright (c) 2007-2016 MIT 6.005 course staff, all rights reserved.
  * Redistribution of original or derived work requires permission of course staff.
  */
-package twitter;
+package test.twitter;
 
 import static org.junit.Assert.*;
 
 import java.time.Instant;
 import java.util.Arrays;
 import java.util.List;
+import P4.twitter.*;
 
 import org.junit.Test;
 
