@@ -6,8 +6,11 @@ package src.twitter;
 import P4.twitter.Timespan;
 
 import java.time.Instant;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Extract consists of methods that extract information from a list of tweets.
@@ -57,7 +60,13 @@ public class Extract {
      *         include a username at most once.
      */
     public static Set<String> getMentionedUsers(List<Tweet> tweets) {
-        throw new RuntimeException("not implemented");
+
+//        throw new RuntimeException("not implemented");
+        Set<String> anSet = new HashSet<>();
+        Pattern pattern=Pattern.compile("@[a-zA-Z]{1,}");
+        Matcher matcher=pattern.matcher(tweets.get(0).getText());
+
+        return  anSet;
     }
 
 }

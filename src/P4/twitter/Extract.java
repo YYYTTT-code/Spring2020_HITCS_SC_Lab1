@@ -90,11 +90,14 @@ public class Extract {
 //			}
 //		}
 //		String reg = "@.+?[^\\-\\w]";
-		String reg = "@[a-zA-Z0-9_-]{1,}";
+		String reg = "(@[a-zA-Z0-9_-]{1,})";
 		Pattern pattern = Pattern.compile(reg);
 		Matcher matcher = pattern.matcher(tweet.getText());
+		System.out.println(matcher.groupCount());
 		while(matcher.find()){
 			anSet.add(matcher.group().substring(1, matcher.group().length()).toLowerCase());
+//			System.out.println(matcher.group().getClass());
+			System.out.println(matcher.group());
 		}
 		return anSet;
 	}
@@ -137,7 +140,7 @@ public class Extract {
 	private static final Instant d2 = Instant.parse("2016-02-17T11:00:00Z");
 	private static final Instant d3 = Instant.parse("2016-02-17T19:00:00Z");
 
-	private static final Tweet tweet1 = new Tweet(1, "alySsa", "is it reasonable to talk about rivest so much?", d1);
+	private static final Tweet tweet1 = new Tweet(1, "alySsa", "is it reasonable to talk about rivest so much?@Alyssa @sdaf @asfd ", d1);
 	private static final Tweet tweet2 = new Tweet(2, "bbitdiddle", "rivest talk in 30 minutes #hype", d2);
 	private static final Tweet tweet3 = new Tweet(3, "Kobe", "You the dog@Alyssa @sdaf @asfd @mit.edu", d3);
 
