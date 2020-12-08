@@ -1,4 +1,5 @@
 package src;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -7,6 +8,9 @@ public class learnRegex {
 
 
     public static void main( String args[] ){
+        File file=new File("");
+        System.out.println(file.getAbsolutePath());
+
 
         // 按指定模式在字符串查找
         String line = "This order was placed for QT3000! OK1? yes for7000! O2?";
